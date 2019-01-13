@@ -1,19 +1,20 @@
 import React from 'react'
 import classes from './answerList.module.scss'
-import answerItem from './answerItem/answerItem'
+import Answeritem from './AnswerItem/AnswerItem'
 
-const answerList = props => {
-  return (
+const answerList = props => (
     <ul className={classes.AnswersList}>
       {props.answers.map((answer, index) => {
         return (
-          <answerItem
+          <Answeritem
+            key={index}
             answer={answer}
+            onAnswerClick={props.onAnswerClick}
           />
         )
       })}
     </ul>
   )
-}
+
 
 export default answerList
