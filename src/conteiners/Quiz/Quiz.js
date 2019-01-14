@@ -39,18 +39,15 @@ class Quiz extends Component{
   render() {
     return (
       <div className={classes.Quiz}>
-        
-        
-        
         <div className={classes.QuizWrapper}>
           <h1>Ответьте на вопросы</h1>
-          <ActiveQuiz 
+          <ActiveQuiz
             question={this.state.quiz[this.state.activeQuestion].question}
             answers={this.state.quiz[this.state.activeQuestion].answers}
             onAnswerClick={this.onAnswerClickHandler}
             questionLength={this.state.quiz.length}
             answerNumber={this.state.activeQuestion + 1}
-            />
+          />
         </div>
         
       </div>
